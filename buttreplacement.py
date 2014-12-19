@@ -79,6 +79,13 @@ def word_makes_sense_to_buttify(tagged_word):
     else:
 	return False
 
+@willie.module.commands('goodbye')
+def testing_thing(bot, trigger):
+    lines = ['euank: And I will strike down upon thee with great butt and furious anger those who attempt to poison and destroy my butts.',
+	    'euank: And you will know my name is the Butt... when I lay my butt upon thee.']
+    for line in lines:
+	bot.msg("#interns", line)
+
 @willie.module.commands('raw')
 def send_raw(bot, trigger):
     if trigger.nick == 'grimesmg' and trigger.group(2):
